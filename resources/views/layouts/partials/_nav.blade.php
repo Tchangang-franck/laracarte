@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('_home-path') }}">Home</a>
+            <a class="{{ set_active_route('_home-path') }} nav-link" aria-current="page" href="{{ route('_home-path') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('_about-path') }}">About</a>
+            <a class="{{ set_active_route('_about-path') }} nav-link " href="{{ route('_about-path') }}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Artisan</a>

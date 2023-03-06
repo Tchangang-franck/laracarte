@@ -30,6 +30,18 @@
     @include('layouts/partials/_footer')
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     {{-- cdn de alpine js 3 --}}
+     <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
+     {{-- cdn swertalert --}}
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    @include('/message-flash/message')
+    @if(Session::has('succès'))
+     <div class="alerte alerte-succès">
+        {{Session ::get('success')}}
+    </div>
+    @endif
 
 </body>
 </html>

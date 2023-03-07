@@ -10,7 +10,9 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMessageCreated extends Mailable
+use Illuminate\Mail\Mailables\Address;
+
+class ContactMessageCreated extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -30,6 +32,8 @@ class ContactMessageCreated extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+           
+            // $this->from($this->$msg->email,$this->$msg->name)
             subject: 'Contact Message Created',
         );
     }
@@ -39,6 +43,7 @@ class ContactMessageCreated extends Mailable
      */
     public function content(): Content
     {
+         
         return new Content(
             markdown: 'email.message.created',
         );

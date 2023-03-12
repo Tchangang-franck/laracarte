@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ App()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +13,11 @@
 
     <title> {{page_title($title ?? '' )}}</title>
     <style>
-        {
-            body{
-                font-family: 'Open Sans',Arial, Helvetica, sans-serif;
-            }
-            footer{
-                margin: 4em 0;
-            }
+        body{
+            padding-top:80px; 
         }
     </style>
+
 </head>
 <body>
     
@@ -35,7 +31,7 @@
 
     {{-- je vais decommenter cette ligne concernant le serveur vite une fois connecté  --}}
 
-     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
      {{-- cdn swertalert --}}
      <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -46,6 +42,5 @@
         {{Session ::get('success')}}
     </div>
     @endif
-
 </body>
 </html>

@@ -1,6 +1,6 @@
 @extends('layouts/default',['title'=>'Contact'])
     @section('content')
-        <div class="container" style="margin-right:2px;margin-top:20px;">
+        <div class="container">
                 <div class="row">
                     <div class="col-md-8  col-sm-10 mx-auto">
                             <h2>Get in Touch</h2>

@@ -33,8 +33,8 @@
               </li> 
             </ul>
             <ul class="nav navbar-nav  navbar-right">
-                <li><a href="#" class="nav-link">Login</a></li>
-                <li><a href="#" class="nav-link">Register</a></li>
+                <li><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+                <li><a href="{{ route('register') }}" class="nav-link">Register</a></li>
               </ul>
       </div>
     </div>

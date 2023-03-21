@@ -11,11 +11,18 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    //
+    /** 
+     * return the message view
+    */
+      
     public function create(){
         return view('message/contact');
       
     }
+
+    /** 
+     * store a message on a database
+    */
 
     public function store(contactFormRequest $request){
         $message= message::create($request->only('name','email','message'));
